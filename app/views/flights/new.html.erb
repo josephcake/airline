@@ -1,0 +1,22 @@
+
+
+<%= form_for @flight do |f| %>
+  <%= f.label :departure_city %>
+  <%= f.collection_select :departure_city, Airport.all, :city, :city %>
+  <br>
+  <%= f.label :arrival_city %>
+  <%= f.collection_select :arrival_city, Airport.all, :city, :city %>
+  <br>
+  <%= f.label :departure_date %>
+  <%= f.text_field :departure_date %>
+  <% f.label :departure_time_1 %>
+  <%= f.hidden_field :departure_time_1, :value => rand(0..23) %>
+  <%= f.hidden_field :departure_time_2, :value => rand(0..23) %>
+  <%= f.hidden_field :departure_time_3, :value => rand(0..23) %>
+  <%= f.hidden_field :departure_time_4, :value => rand(0..23) %>
+  <%= f.hidden_field :departure_time_5, :value => rand(0..23) %>
+  <%= f.hidden_field :departure_time_6, :value => rand(0..23) %>
+  <%= f.hidden_field :departure_time_7, :value => rand(0..23) %>
+  <%= f.hidden_field :departure_time_8, :value => rand(0..23) %>
+  <%= submit_tag "Find my flights!" %>
+<% end %>

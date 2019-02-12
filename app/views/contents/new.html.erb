@@ -1,0 +1,6 @@
+<%= form_for @content do |f| %>
+  <%= f.hidden_field :email %>
+  <%= f.text_field :email, placeholder: "email" %>
+  <%= f.hidden_field :password %>
+  <%= f.text_field :password, placeholder: "password" %>
+<% end %>
